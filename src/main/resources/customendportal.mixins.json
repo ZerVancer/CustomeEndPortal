@@ -3,7 +3,8 @@
 	"package": "net.zervancer.customendportal.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"MixinEnderEyeItem",
+		"MixinEndPortalFrameBlock"
 	],
 	"injectors": {
 		"defaultRequire": 1
