@@ -1,6 +1,5 @@
 package net.zervancer.customendportal.mixin;
 
-import java.util.Optional;
 import java.util.Stack;
 
 import org.spongepowered.asm.mixin.Mixin;
