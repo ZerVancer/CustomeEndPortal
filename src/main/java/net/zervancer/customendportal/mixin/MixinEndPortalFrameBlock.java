@@ -1,5 +1,6 @@
 package net.zervancer.customendportal.mixin;
 
+import java.util.Optional;
 import java.util.Stack;
 
 import org.spongepowered.asm.mixin.Mixin;
@@ -11,9 +12,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.EndPortalFrameBlock;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
+
+
 
 @Mixin(EndPortalFrameBlock.class)
 public class MixinEndPortalFrameBlock extends Block {
@@ -24,8 +28,7 @@ public class MixinEndPortalFrameBlock extends Block {
 
     @ModifyArg(method="<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/Block;<init>(Lnet/minecraft/block/AbstractBlock$Settings;)V"))
     private static AbstractBlock.Settings endPortalFrameSettings(AbstractBlock.Settings settings) {
-
-        return settings.hardness(50.0f);
+        return settings.hardness(25.0f).sounds(BlockSoundGroup.STONE);
     }
     
     @Override
