@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
 	"id": "customendportal",
-	"version": "${version}",
+	"version": "1.0.0",
 	"name": "CustomEndPortal",
-	"description": "Makes the ender portal frame shape constumisable, minable and craftable.",
+	"description": "Makes the ender portal frame constumisable, minable and craftable.",
 	"authors": [
 		"ZerVacner"
 	],
@@ -11,7 +11,7 @@
 		"sources": "https://github.com/ZerVancer/CustomeEndPortal"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/customendportal/icon.png",
+	"icon": "assets/customendportal/CustomEndPortal.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -26,11 +26,8 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.16.10",
-		"minecraft": ">=1.21",
+		"minecraft": "~1.21.1",
 		"java": ">=21",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
