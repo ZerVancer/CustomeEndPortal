@@ -54,7 +54,7 @@ public class MixinEndPortalFrameBlock extends Block {
             blockPos = stack.pop();
 
             if (world.getBlockState(blockPos).isOf(Blocks.END_PORTAL)) {
-                world.setBlockState(blockPos, Blocks.AIR.getDefaultState(), Block.FORCE_STATE);
+                world.setBlockState(blockPos, Blocks.AIR.getDefaultState(), Block.NOTIFY_ALL);
                 stack.add(blockPos.offset(Direction.NORTH));
                 stack.add(blockPos.offset(Direction.EAST));
                 stack.add(blockPos.offset(Direction.WEST));
