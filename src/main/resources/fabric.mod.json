@@ -8,10 +8,11 @@
 		"ZerVacner"
 	],
 	"contact": {
-		"sources": "https://github.com/ZerVancer/CustomeEndPortal"
+		"sources": "https://github.com/ZerVancer/CustomeEndPortal",
+		"issues": "https://github.com/ZerVancer/CustomeEndPortal/issues"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/customendportal/CustomEndPortal.png",
+	"icon": "assets/customendportal/CustomEndPortalIcon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -26,7 +27,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.16.10",
-		"minecraft": "~1.21.1",
+		"minecraft": ">=1.21.2 <=1.21.5",
 		"java": ">=21",
 		"fabric-api": "*"
 	}
