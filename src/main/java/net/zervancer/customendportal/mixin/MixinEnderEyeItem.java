@@ -29,10 +29,10 @@ public abstract class MixinEnderEyeItem {
 
     @Inject(method = "useOnBlock", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/EndPortalFrameBlock;getCompletedFramePattern()Lnet/minecraft/block/pattern/BlockPattern;"), locals = LocalCapture.CAPTURE_FAILHARD, cancellable = true)
     public void endPortal(ItemUsageContext context, CallbackInfoReturnable<ActionResult> cir, World world, BlockPos blockPos){
-        ArrayList<BlockPos> endPortalframeChain = getCompleteFrame(blockPos, world);
+        ArrayList<BlockPos> endPortalFrameChain = getCompleteFrame(blockPos, world);
 
-        if (!endPortalframeChain.isEmpty()) {
-            for (BlockPos blockPos2 : endPortalframeChain) {
+        if (!endPortalFrameChain.isEmpty()) {
+            for (BlockPos blockPos2 : endPortalFrameChain) {
                 world.setBlockState(blockPos2, Blocks.END_PORTAL.getDefaultState(), Block.NOTIFY_LISTENERS);
             }
             world.syncGlobalEvent(WorldEvents.END_PORTAL_OPENED, blockPos.add(1, 0, 1), 0);
